@@ -96,6 +96,8 @@
 
 👉 <b>Donc Informatica = OAuth Authorization Code + Refresh Token obligatoire.</b>    
 
+--- 
+
 ### 🏆 Recommandations finales pour ton architecture
 #### 🔧 Pour MuleSoft (API Case CRUD)    
 👉 OAuth 2.0 JWT Bearer Flow    
