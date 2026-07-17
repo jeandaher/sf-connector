@@ -45,7 +45,7 @@
 | Username + Password | ❌ Faible   |  ❌     |  ❌          | ❌         | Débogage local |
 | OAuth Web Server (Auth Code) | ⭐⭐⭐⭐ |  ❌     |  ✔          | ❌         | Apps web, IICS |
 | OAuth Client Credentials | ⭐⭐⭐   |  ✔    |  ❌          | ❌         | MuleSoft simple |
-| Username + Password | ❌ Faible   |  ✔    |  ✔(via Connected App)| ✔        | MuleSoft enterprise |
+| OAuth JWT Bearer | ⭐⭐⭐⭐⭐ |  ✔    |  ✔(via Connected App)| ✔        | MuleSoft enterprise |
 
 ---
 
