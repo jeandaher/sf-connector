@@ -69,7 +69,7 @@
 * Certificat sécurisé (JWT)    
 * Rotation simple    
 * Compatible avec External Client App Manager    
-*Parfait pour API-led connectivity        
+* Parfait pour API-led connectivity        
 
 👉 <b>Ton architecture MuleSoft Case CRUD doit utiliser JWT Bearer (idéal) ou Client Credentials (simple).</b>    
 
