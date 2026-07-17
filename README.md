@@ -73,6 +73,8 @@
 
 👉 <b>Ton architecture MuleSoft Case CRUD doit utiliser JWT Bearer (idéal) ou Client Credentials (simple).</b>    
 
+--- 
+
 ### 🧩 4. Méthodes compatibles Informatica (IICS / IDMC)
 #### ✔ Méthode supportée par le connecteur Salesforce d’Informatica    
 
