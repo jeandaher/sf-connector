@@ -1,46 +1,49 @@
 ## 🧩 1. Les 4 méthodes d’authentification Salesforce (vision globale)
 ### 1️⃣ Username + Password + Security Token
-À éviter.
-
-Risque de rotation du token    
-Pas de scopes OAuth    
-Pas de révocation propre    
-Pas de séparation des permissions    
-Dépend d’un utilisateur humain    
-Incompatible MFA moderne    
+<b>À éviter.</b>
+* Risque de rotation du token    
+* Pas de scopes OAuth    
+* Pas de révocation propre    
+* Pas de séparation des permissions    
+* Dépend d’un utilisateur humain    
+* Incompatible MFA moderne    
     
 ### 2️⃣ OAuth 2.0 Web Server Flow (Authorization Code)
-Conçu pour les applications web.   
-Nécessite un redirect URI    
-Nécessite un consent screen    
-Nécessite un refresh token    
-Permet des scopes OAuth    
-Permet une révocation propre    
-Méthode utilisée par Informatica    
+<b>Conçu pour les applications web.</b>   
+* Nécessite un redirect URI    
+* Nécessite un consent screen    
+* Nécessite un refresh token    
+* Permet des scopes OAuth    
+* Permet une révocation propre    
+* <b>Méthode utilisée par Informatica</b>    
 
 ### 3️⃣ OAuth 2.0 Client Credentials Flow    
-Simple, efficace, M2M.    
-MuleSoft envoie clientId + clientSecret    
-Salesforce renvoie un access_token    
-Pas de refresh token    
-Pas de mot de passe Salesforce     
-Pas de certificat    
-Pas d’utilisateur humain    
-Machine‑to‑machine (M2M)    
-Recommandé pour MuleSoft (si pas besoin de JWT)    
+<b>Simple, efficace, M2M.</b>    
+* MuleSoft envoie clientId + clientSecret    
+* Salesforce renvoie un access_token    
+* Pas de refresh token    
+* Pas de mot de passe Salesforce     
+* Pas de certificat    
+* Pas d’utilisateur humain    
+* <b>Machine‑to‑machine (M2M)</b>    
+* <b>Recommandé pour MuleSoft (si pas besoin de JWT)</b>    
 
 ### 4️⃣ OAuth 2.0 JWT Bearer Flow
-Le plus sécurisé.    
-Pas de mot de passe     
-Pas de token Salesforce à stocker    
-Authentification serveur‑à‑serveur    
-Rotation simple    
-Permissions contrôlées via External Client App    
-Certificat signé    
-Méthode enterprise‑grade    
-Méthode recommandée pour MuleSoft    
+<b>Le plus sécurisé.</b>    
+* Pas de mot de passe     
+* Pas de token Salesforce à stocker    
+* Authentification serveur‑à‑serveur    
+* Rotation simple    
+* Permissions contrôlées via External Client App    
+* Certificat signé    
+* <b>Méthode enterprise‑grade</b>    
+* <b>Méthode recommandée pour MuleSoft</b>    
 
 ### 🧱 2. Tableau comparatif des 4 méthodes
+| Méthode             | Sécurité     | M2M     | Refresh Token | Certificat | Usage typique |
+| ------------------- | ------------ | ------- | ------------- |----------- | ------------- |
+| Username + Password | ❌ Faible   |  ❌     |  ❌          | ❌         | Débogage local |
+
 Méthode	Sécurité	M2M	Refresh Token	Certificat	Usage typique
 Username + Password	❌ Faible	❌	❌	❌	Débogage local
 OAuth Web Server (Auth Code)	⭐⭐⭐⭐	❌	✔	❌	Apps web, IICS
