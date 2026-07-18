@@ -1,4 +1,4 @@
-## SF connector - Implementation dans Mule App  - Methode 1 M2M  
+## SF connector - Implementation dans Mule App  - Methode OAuth Client Credentials
 
 Sfdc-config:    
 ```
@@ -11,4 +11,7 @@ Sfdc-config:
     </salesforce:oauth-client-credentials-connection>
   </salesforce:sfdc-config>
 ```
+
+## SF connector - Implementation dans Mule App  - Methode OAuth JWT
+
 
