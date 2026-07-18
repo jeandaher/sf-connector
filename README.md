@@ -1,4 +1,15 @@
-## 🧩 1. Les 4 méthodes d’authentification Salesforce (vision globale)
+## 🧩 Les 4 méthodes d’authentification Salesforce (vision globale)
+
+### 🧱 Tableau comparatif des 4 méthodes
+| Méthode             | Sécurité     | M2M     | Refresh Token | Certificat | Usage typique |
+| ------------------- | ------------ | ------- | ------------- |----------- | ------------- |
+| Username + Password | ❌ Faible   |  ❌     |  ❌          | ❌         | Débogage local |
+| OAuth Web Server (Auth Code) | ⭐⭐⭐⭐ |  ❌     |  ✔          | ❌         | Apps web, IICS |
+| OAuth Client Credentials | ⭐⭐⭐   |  ✔    |  ❌          | ❌         | MuleSoft simple |
+| OAuth JWT Bearer | ⭐⭐⭐⭐⭐ |  ✔    |  ✔(via Connected App)| ✔        | MuleSoft enterprise |
+
+---
+
 ### 1️⃣ Username + Password + Security Token
 <b>À éviter.</b>
 * Risque de rotation du token    
@@ -39,18 +50,9 @@
 * <b>Méthode enterprise‑grade</b>    
 * <b>Méthode recommandée pour MuleSoft</b>    
 
-### 🧱 2. Tableau comparatif des 4 méthodes
-| Méthode             | Sécurité     | M2M     | Refresh Token | Certificat | Usage typique |
-| ------------------- | ------------ | ------- | ------------- |----------- | ------------- |
-| Username + Password | ❌ Faible   |  ❌     |  ❌          | ❌         | Débogage local |
-| OAuth Web Server (Auth Code) | ⭐⭐⭐⭐ |  ❌     |  ✔          | ❌         | Apps web, IICS |
-| OAuth Client Credentials | ⭐⭐⭐   |  ✔    |  ❌          | ❌         | MuleSoft simple |
-| OAuth JWT Bearer | ⭐⭐⭐⭐⭐ |  ✔    |  ✔(via Connected App)| ✔        | MuleSoft enterprise |
-
 ---
 
-### 🐴 3. Méthodes compatibles MuleSoft (Anypoint Platform)
-#### ✔ Méthodes réellement utilisées en production MuleSoft
+### SF connector for MuleSoft (Anypoint Platform)
 
 | Méthode             | Support MuleSoft | Recommandation   | 
 | ------------------- | ------------ | ------- |
@@ -59,9 +61,7 @@
 |OAuth Client Credentials | ✔  | ⭐ Recommandé |  
 |OAuth JWT Bearer | ✔  | ⭐⭐⭐⭐ Recommandé (enterprise-grade) |  
 
----
-
-### 🔥 Pourquoi MuleSoft préfère Client Credentials ou JWT ?
+#### 🔥 Pourquoi MuleSoft préfère Client Credentials ou JWT ?
 * Pas d’utilisateur humain    
 * Pas de consent screen    
 * Pas de redirect URI    
@@ -75,8 +75,8 @@
 
 --- 
 
-### 🧩 4. Méthodes compatibles Informatica (IICS / IDMC)
-#### ✔ Méthode supportée par le connecteur Salesforce d’Informatica    
+### SF connector for Informatica (IICS / IDMC)
+<i><b>✔ Méthode supportée par le connecteur Salesforce d’Informatica </b></i>    
 
 | Méthode             | Support IICS | Recommandation   | 
 | ------------------- | ------------ | ------- |
@@ -84,7 +84,6 @@
 | OAuth Web Server Flow (Authorization Code) | ✔  | ⭐⭐⭐⭐⭐ Méthode officielle |  
 |OAuth Client Credentials | ❌  | — |  
 |OAuth JWT Bearer | ❌ | — |  
-
 
 #### 🔍 Pourquoi Informatica impose OAuth Authorization Code ?    
 * Le Secure Agent doit se reconnecter automatiquement    
@@ -116,9 +115,6 @@
 * Consent screen initial
 * Reconnexion automatique du Secure Agent
 * Méthode officielle du connecteur Salesforce
-
-
-
 
 
 Méthode officielle du connecteur Salesforce
