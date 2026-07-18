@@ -12,6 +12,6 @@ Sfdc-config:
   </salesforce:sfdc-config>
 ```
 
-## SF connector - Implementation dans Mule App  - Methode OAuth JWT
+## SF connector - Implementation dans Mule App  - Methode OAuth JWT Bearer    
 
 
